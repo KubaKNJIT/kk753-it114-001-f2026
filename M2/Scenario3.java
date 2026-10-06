@@ -36,10 +36,33 @@ public class Scenario3 extends BaseClass {
         //in total bunch of looping, converting, then more looping, with comparing in order to convert
         //I think.
 
-
+        //Updated Plan / Note taking
+        //From python I know int(thing) converts stuff, so I went ahead and found the java equivalent
+        //Also learned that Math has an abs function, which gives the absolute value of the object
+        //Finding a whole bunch of new String methods and such, cannot implement them for my life
+        //So to implement the startsWith and substring, I had to completely affirm that what is being passed in is a String
+        //to do that I had make a new String that will act as the check as opposed to the value at the index
+        //but then I can just use arr[i] if the "item" is correct since it's technically the same thing just different data types
+        
         Object[] output = new Object[arr.length];
         // Start Solution Edits
-
+        for(int i = 0; i < arr.length; i++){
+            //arr[i] = (int) arr[i] * -1; //valiant effort for part 1; nope it failed terribly
+            if (arr[i] instanceof Integer) { //more familiar with this than switch/case
+                output[i] = Math.abs((Integer)arr[i]);
+            } else if (arr[i] instanceof Double) {
+                output[i] = Math.abs((Double)arr[i]);
+            } else if (arr[i] instanceof Float) {
+                output[i] = Math.abs((Float)arr[i]);
+            } else if (arr[i] instanceof String) {
+                String item = (String) arr[i]; //type-cast on a whole new level, for me
+                if(item.startsWith("-")){
+                    output[i] = item.substring(1);
+                }else{
+                    output[i] = arr[i];
+                }
+            }
+        }
         // End Solution Edits
         printOutputWithType(output, true);
     }
