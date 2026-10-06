@@ -1,0 +1,69 @@
+package M2;
+
+// copilot: disable
+
+// @ts-nocheck
+
+public class Scenario1 extends BaseClass {
+    private static int[] array1 = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+    private static int[] array2 = { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 };
+    private static int[] array3 = { 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9 };
+    private static int[] array4 = { 9, 9, 8, 8, 7, 7, 6, 6, 5, 5, 4, 4, 3, 3, 2, 2, 1, 1, 0, 0 };
+
+    private static void printOdds(int[] arr, int arrayNumber) {
+        // Only make edits between the designated "Start" and "End" comments
+        printScenario1ArrayInfo(arr, arrayNumber);
+        // This should be solved without Copilot auto-completion, to toggle it, click
+        // the Copilot chat bubble at the top of the editor.
+        // Configure inline suggestions to "Disabled Inline Suggestions" (or similar)
+        // when writing code for this problem.
+
+        // Challenge 1: From each passed in array, print odd values only in a single
+        // line separated by commas and a space after each comma (should not have
+        // leading or trailing commas)
+        // Step 1: sketch out plan using comments (include ucid and date)
+        // Step 2: Add/commit your outline of comments (required for full credit)
+        // Step 3: Add code to solve the problem (add/commit as needed)
+
+        //Planning (kk753, October 5th, 2026)
+        //I will most likely iterate through a loop using a for loop
+        //Within the loop, it will take a value from the index specified by the value of i
+        //Then to check for odd values I will just use that division thingy (% 2)
+        //If theres no remainder then its even, otherwise its odd
+        //So the value at those indexes I can either do another loop with all the stored odd numbers in a separate array
+        //Go through that loop and do print + ", " something like that
+        //I could possibly do a if statement at the end, if i = length of array-1 then don't add ", "
+        //Or I could not do that which is unlikely since I can't think of anything else for the moment
+
+        //During the process:
+        //Upon realizing that I cannot use ArrayLists, I need to reconsider how I want to do this
+
+        // Start Solution Edits
+    
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] % 2 != 0){ //checks for odd values
+                if(i == arr.length -1 ){ //if statement that basically checks if we're at the end of the array or not
+                    System.out.println(arr[i]); 
+                } else { // should be true for 90% of the cases, otherwise I'm cooked
+                    System.out.print(arr[i] + ", ");
+                }
+            }
+        }
+
+        // End Solution Edits
+        System.out.println("");
+        System.out.println("______________________________________");
+    }
+
+    public static void main(String[] args) {
+        final String ucid = "kk753"; // <-- change to your UCID
+        // no edits below this line
+        printHeader(ucid, 1);
+        printOdds(array1, 1);
+        printOdds(array2, 2);
+        printOdds(array3, 3);
+        printOdds(array4, 4);
+        printFooter(ucid, 1);
+
+    }
+}

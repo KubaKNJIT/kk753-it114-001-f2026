@@ -1,0 +1,73 @@
+package M2;
+// copilot: disable
+
+// @ts-nocheck
+
+public class Scenario2 extends BaseClass {
+    private static double[] array1 = { 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 };
+    private static double[] array2 = { 1.0000001, 1.0000002, 1.0000003, 1.0000004, 1.0000005 };
+    private static double[] array3 = { 1.0 / 3.0, 2.0 / 3.0, 4.0 / 3.0, 8.0 / 3.0, 8.0 / 3.0 };
+    private static double[] array4 = { 1e16, 1.0, -1e16, 2.0, -2.0, 1e-16 };
+    private static double[] array5 = { Math.PI, Math.E, Math.sqrt(2), Math.sqrt(3), Math.sqrt(5), Math.log(2),
+            Math.log10(3) };
+
+    private static void sumValues(double[] arr, int arrayNumber) {
+        // Only make edits between the designated "Start" and "End" comments
+        printScenario2ArrayInfo(arr, arrayNumber);
+        // This should be solved without Copilot auto-completion, to toggle it, click
+        // the Copilot chat bubble at the top of the editor.
+        // Configure inline suggestions to "Disabled Inline Suggestions" (or similar)
+        // when writing code for this problem.
+
+        // Challenge 1: Sum all the values of the passed in array and assign to the
+        // `total` variable
+        // Challenge 2: Have the sum (total) be represented as a number with exactly 2
+        // decimal places (similar to currency), assign to `modifiedTotal` variable
+        // Example: 0.1 would be shown as 0.10, 1 would be shown as 1.00, 0.011 as 0.01,
+        // etc
+        // Step 1: sketch out plan using comments (include ucid and date)
+        // Step 2: Add/commit your outline of comments (required for full credit)
+        // Step 3: Add code to solve the problem (add/commit as needed)
+
+        //Planning (kk753, October 5th, 2026)
+        //Another loop, probably for loop to iterate through the array
+        //cram those numbers together and assign it to total
+        //For the next part, I will either try to use String format like "%.2f"
+        //Or I can use Math.round() since Math is used in that last array
+        //Surely it'll work roughly the way I believe it to
+        //Assuming rounding is allowed and I'm not just supposed to leave the value the same
+        //with just the two decimal places showing
+
+        double total = 0;
+        // Start Solution Edits
+        // Solve Challenge 1 here
+        for(int i = 0; i < arr.length; i++){
+            //arr[i] = Math.round(arr[i]); this resulted it being rounded to the the ones place
+            //arr[i] = Math.round(arr[i] * 100.0) / 100.0; //we'll see; it worked
+            total += arr[i]; //assuming this functions for the Math riddled array
+        }
+
+        // Solve Challenge 2 here
+        Object modifiedTotal = "?";
+        //modifiedTotal = Math.round(total * 100.0) / 100.0; //does it work the same?; yes and no
+        // this worked but for numbers that have less than 2 decimal spaces it doesn't add the 0
+        modifiedTotal = String.format("%.2f", total); //attempt at implementing this version instead
+        //this absolutely worked better, it formats it to the correct decimal place due to the .2
+
+        // End Solution Edits
+        printScenario2Output(total, modifiedTotal);
+    }
+
+    public static void main(String[] args) {
+        final String ucid = "kk753"; // <-- change to your UCID
+        // no edits below this line
+        printHeader(ucid, 2);
+        sumValues(array1, 1);
+        sumValues(array2, 2);
+        sumValues(array3, 3);
+        sumValues(array4, 4);
+        sumValues(array5, 5);
+        printFooter(ucid, 2);
+
+    }
+}
