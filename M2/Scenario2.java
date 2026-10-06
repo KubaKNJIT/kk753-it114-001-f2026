@@ -41,9 +41,18 @@ public class Scenario2 extends BaseClass {
         double total = 0;
         // Start Solution Edits
         // Solve Challenge 1 here
+        for(int i = 0; i < arr.length; i++){
+            //arr[i] = Math.round(arr[i]); this resulted it being rounded to the the ones place
+            //arr[i] = Math.round(arr[i] * 100.0) / 100.0; //we'll see; it worked
+            total += arr[i]; //assuming this functions for the Math riddled array
+        }
 
         // Solve Challenge 2 here
         Object modifiedTotal = "?";
+        //modifiedTotal = Math.round(total * 100.0) / 100.0; //does it work the same?; yes and no
+        // this worked but for numbers that have less than 2 decimal spaces it doesn't add the 0
+        modifiedTotal = String.format("%.2f", total); //attempt at implementing this version instead
+        //this absolutely worked better, it formats it to the correct decimal place due to the .2
 
         // End Solution Edits
         printScenario2Output(total, modifiedTotal);
