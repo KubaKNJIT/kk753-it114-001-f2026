@@ -28,6 +28,16 @@ public class Scenario2 extends BaseClass {
         // Step 1: sketch out plan using comments (include ucid and date)
         // Step 2: Add/commit your outline of comments (required for full credit)
         // Step 3: Add code to solve the problem (add/commit as needed)
+
+        //Planning (kk753, October 5th, 2026)
+        //Another loop, probably for loop to iterate through the array
+        //cram those numbers together and assign it to total
+        //For the next part, I will either try to use String format like "%.2f"
+        //Or I can use Math.round() since Math is used in that last array
+        //Surely it'll work roughly the way I believe it to
+        //Assuming rounding is allowed and I'm not just supposed to leave the value the same
+        //with just the two decimal places showing
+
         double total = 0;
         // Start Solution Edits
         // Solve Challenge 1 here
@@ -40,7 +50,7 @@ public class Scenario2 extends BaseClass {
     }
 
     public static void main(String[] args) {
-        final String ucid = "mt85"; // <-- change to your UCID
+        final String ucid = "kk753"; // <-- change to your UCID
         // no edits below this line
         printHeader(ucid, 2);
         sumValues(array1, 1);

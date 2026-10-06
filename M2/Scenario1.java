@@ -23,6 +23,17 @@ public class Scenario1 extends BaseClass {
         // Step 1: sketch out plan using comments (include ucid and date)
         // Step 2: Add/commit your outline of comments (required for full credit)
         // Step 3: Add code to solve the problem (add/commit as needed)
+
+        //Planning (kk753, October 5th, 2026)
+        //I will most likely iterate through a loop using a for loop
+        //Within the loop, it will take a value from the index specified by the value of i
+        //Then to check for odd values I will just use that division thingy (% 2)
+        //If theres no remainder then its even, otherwise its odd
+        //So the value at those indexes I can either do another loop with all the stored odd numbers in a separate array
+        //Go through that loop and do print + ", " something like that
+        //I could possibly do a if statement at the end, if i = length of array-1 then don't add ", "
+        //Or I could not do that which is unlikely since I can't think of anything else for the moment
+
         // Start Solution Edits
 
         // End Solution Edits
@@ -31,7 +42,7 @@ public class Scenario1 extends BaseClass {
     }
 
     public static void main(String[] args) {
-        final String ucid = "mt85"; // <-- change to your UCID
+        final String ucid = "kk753"; // <-- change to your UCID
         // no edits below this line
         printHeader(ucid, 1);
         printOdds(array1, 1);

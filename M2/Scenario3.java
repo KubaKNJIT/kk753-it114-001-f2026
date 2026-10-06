@@ -25,6 +25,18 @@ public class Scenario3 extends BaseClass {
         // Step 1: sketch out plan using comments (include ucid and date)
         // Step 2: Add/commit your outline of comments (required for full credit)
         // Step 3: Add code to solve the problem (add/commit as needed)
+
+        //Planning (kk753, October 5th, 2026)
+        //Once again a for loop
+        //If input is less than 0 then multiply by -1, regardless add to a new array
+        //I might have to use double() to try and convert the types to all be the same
+        //To revert the types back Ill have to experiment with swapping and manipulating the types
+        //I could compare the original array to the new array, making a for loop in a for loop kinda deal
+        //That may require me to make a third array if I'm thinking about it correctly
+        //in total bunch of looping, converting, then more looping, with comparing in order to convert
+        //I think.
+
+
         Object[] output = new Object[arr.length];
         // Start Solution Edits
 
@@ -33,7 +45,7 @@ public class Scenario3 extends BaseClass {
     }
 
     public static void main(String[] args) {
-        final String ucid = "mt85"; // <-- change to your UCID
+        final String ucid = "kk753"; // <-- change to your UCID
         // no edits below this line
         printHeader(ucid, 3);
         bePositive(array1, 1);

@@ -36,6 +36,14 @@ public class Scenario4 extends BaseClass {
         // Step 1: sketch out plan using comments (include ucid and date)
         // Step 2: Add/commit your outline of comments (required for full credit)
         // Step 3: Add code to solve the problem (add/commit as needed)
+
+        //Planning (kk753, October 5th, 2026)
+        //Rewriting the plan, I need to iterate through the arrays and then iterate through the strings
+        //in those strin iterations compare chars to see if they can be converted to int or String using if statements
+        //at the same time toUpperCase() the characters if they are ints/Strings
+        //I might be able to split then trim the resulting splitted things
+        //I know for a fact I'll need trim, I think during the coding I'll know what order to do it
+        
         String placeholderForModifiedPhrase = "";
         String placeholderForMiddleCharacters = "";
 
@@ -51,7 +59,7 @@ public class Scenario4 extends BaseClass {
     }
 
     public static void main(String[] args) {
-        final String ucid = "mt85"; // <-- change to your UCID
+        final String ucid = "kk753"; // <-- change to your UCID
         // No edits below this line
         printHeader(ucid, 4);
 
