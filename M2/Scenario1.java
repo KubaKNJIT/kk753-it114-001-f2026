@@ -1,4 +1,5 @@
 package M2;
+
 // copilot: disable
 
 // @ts-nocheck
@@ -34,7 +35,20 @@ public class Scenario1 extends BaseClass {
         //I could possibly do a if statement at the end, if i = length of array-1 then don't add ", "
         //Or I could not do that which is unlikely since I can't think of anything else for the moment
 
+        //During the process:
+        //Upon realizing that I cannot use ArrayLists, I need to reconsider how I want to do this
+
         // Start Solution Edits
+    
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] % 2 != 0){ //checks for odd values
+                if(i == arr.length -1 ){ //if statement that basically checks if we're at the end of the array or not
+                    System.out.println(arr[i]); 
+                } else { // should be true for 90% of the cases, otherwise I'm cooked
+                    System.out.print(arr[i] + ", ");
+                }
+            }
+        }
 
         // End Solution Edits
         System.out.println("");
