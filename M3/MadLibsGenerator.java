@@ -16,6 +16,8 @@ Challenge 3: Mad Libs Generator (Randomized Stories)
 - Replace placeholders with user input (assign back to original slot in collection)
 */
 
+//planning
+//
 public class MadLibsGenerator extends BaseClass {
     private static final String STORIES_FOLDER = "M3/stories";
     private static String ucid = "kk753"; // <-- change to your ucid
