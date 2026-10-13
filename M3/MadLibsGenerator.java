@@ -47,7 +47,7 @@ public class MadLibsGenerator extends BaseClass {
         // Start edits
 
         // load a random story file
-        File selectedStory = new File(folder, story1.txt); //this should be the file I have in the m3 folder
+        File selectedStory = new File(folder, story1.txt);
 
         // parse the story lines
         try {
