@@ -17,7 +17,15 @@ Challenge 3: Mad Libs Generator (Randomized Stories)
 */
 
 //planning
-//
+//im going to read in story1.txt, naturally its the first one I see
+//i have a separate .txt file in the M3 folder, I'm unsure if that's how this works but I'll try it
+//from that point I'll have to use the scanner class to read through the txt file
+//since im iterating there'll definitely be a for loop
+//Ill have to identify the location of the placeholder
+//receive user input, take that input, and wherever the placeholder is I'll have to potentially reiterate
+//this all depends whether I'm able to figure out how to iterate and adjust at the same time
+//this plan is absolutely subject to change as I work through the code
+
 public class MadLibsGenerator extends BaseClass {
     private static final String STORIES_FOLDER = "M3/stories";
     private static String ucid = "kk753"; // <-- change to your ucid
